@@ -1,0 +1,1 @@
+I am creating this website as a way to use some javascript as well as actually wanting to have an easy glance at budgeting. 

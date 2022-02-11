@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--<script type="text/javascript" src="/js/budget.js">-->
+    <script>
+        ncIncomeTax = .24;
+
+
+    function calculateNet(income, ncIncomeTax) {
+    //Take income entered in the text field on index.html and multiply that by income tax, then subtract that from income to get net after taxes
+    income = income - (income * ncIncomeTax);
+    return income;
+
+    }
+    netMonthlyIncome = income / 12;
+    function calculateBudget(income) {
+    // takes new income and displays how much should be spent on bills, savings, and luxury / entertainment. Bills should be half, savings should be a third, and luxury spending should be limited to the rest.//
+    let idealExpenses = income * .5;
+    let idealSavings = income * .3;
+    let idealLuxury = income * .2;
+}
+    </script>
+    <title>Monthly Budget Calculator</title>
+</head>
+<body>
+    <div class="header">
+
+    </div>
+    <div class="main">
+        <h3>Monthly Budget Calculator</h3>
+        <div>
+        <form action="/js/budget.js">
+            <label for="income">Enter your annual income:</label>
+            <input type="text" id="income" name="income"><br>
+            <input type="submit">
+            <!-- Here I would like to have a button that sends the income info to a js file
+                that would then populate a table showing the results-->
+        </form>
+        <table>
+            <tr>
+                <td>Annual Gross Income:</td>
+                <td>(js return for var income entered)</td>
+            </tr>
+            <tr>
+                <td>Net Monthly Income:</td>
+                <td>(js return for var netMonthlyIncome calculated)</td>
+            </tr>
+            <tr>
+                <td>Annual Net Income:</td>
+                <td>(js return for var income entered)</td>
+            </tr>
+            <tr>
+                <td>Ideal Monthly Expenses:</td>
+                <td>(js return for var idealExpenses calculated)</td>
+            </tr>
+            <tr>
+                <td>Ideal Monthly Savings:</td>
+                <td>(js return for var idealSavings calculated)</td>
+            </tr>
+            <tr>
+                <td>Ideal Monthly Luxury Spending:</td>
+                <td>(js return for var idealLuxury calculated)</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div class="footer">
+            NN 2022
+    </div>
+</body>
+</html>
